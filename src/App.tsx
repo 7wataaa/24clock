@@ -1,5 +1,13 @@
+import { MainClock } from './MainClock';
+import { SubClock } from './SubClock';
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <MainClock />
+      <SubClock />
+    </>
+  );
 }
 
 export default App;

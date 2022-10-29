@@ -1,19 +1,17 @@
 import { Stat, StatHelpText, StatLabel, StatNumber } from '@chakra-ui/react';
-import { useState } from 'react';
-import { useInterval } from 'react-use';
+import { useNowTime } from './hook/useNowTime';
 
 export const SubClock = () => {
-  const [colon, setColon] = useState(':');
-  useInterval(() => {
-    setColon(colon === ':' ? ' ' : ':');
-  }, 1000);
+  const now = useNowTime();
 
   const pad = (n: number) => `${n}`.padStart(2, '0');
 
-  const nowHour = pad(new Date(Date.now()).getHours());
-  const nowMinutes = pad(new Date(Date.now()).getMinutes());
-  const nowTime = `${nowHour}${colon}${nowMinutes}`;
-  const nowDate = new Date(Date.now()).toDateString();
+  const nowHour = pad(now.getHours());
+  const nowMinutes = pad(now.getMinutes());
+  const nowTime = `${nowHour}${
+    now.getSeconds() % 2 === 0 ? ':' : ' '
+  }${nowMinutes}`;
+  const nowDate = now.toDateString();
 
   return (
     <Stat

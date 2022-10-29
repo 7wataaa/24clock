@@ -13,6 +13,7 @@ const LongHand = ({ angle = 0, ...props }) => {
       borderRadius="100rem"
       transformOrigin="bottom center"
       transform={`translate(-50%, -100%) rotate(${angle}deg)`}
+      data-testid="LongHand"
       {...props}
     />
   );

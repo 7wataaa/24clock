@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  CI:
+  CICD:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,11 +24,10 @@ jobs:
       - uses: borales/actions-yarn@v3.0.0
         with:
           cmd: build
-  CD:
-    runs-on: ubuntu-latest
-    needs: CI
-    steps:
-      - uses: actions/checkout@v2
+      - name: debug
+        run: ls -a
+      - name: debug build folder
+        run: ls -a ./build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

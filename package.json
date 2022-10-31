@@ -47,5 +47,6 @@
   },
   "devDependencies": {
     "@testing-library/react-hooks": "^8.0.1"
-  }
+  },
+  "homepage": "https://7wataaa.github.io/24clock"
 }

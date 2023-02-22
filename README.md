@@ -1,3 +1,12 @@
+# 24clock
+
+<div align="center">
+  <img width="500" alt="24clock" src="https://user-images.githubusercontent.com/65275342/220534627-f039aecb-4bf7-4013-91c6-33087c8ff14b.png">
+  <p>This app is a single-handed clock that completes a full revolution every 24 hours.</p>
+</div>
+
+The live site can be accessed at: https://7wataaa.github.io/24clock/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
